@@ -1,0 +1,16 @@
+﻿
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4">Dobrodošao @User.Identity.Name</h1>
+    </div>
+}
+else
+{
+<div class="text-center">
+    <h1 class="display-4">BOP</h1>
+    <p>Za nastavak je potrebna prijava.</p>
+    <button type="button"><a href="https://localhost:44330/Identity/Account/Register">Registracija</a></button>
+    <button type="button"><a href="https://localhost:44330/Identity/Account/Login">Prijava</a></button>
+</div>
+}
